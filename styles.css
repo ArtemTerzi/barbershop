@@ -1,0 +1,227 @@
+:root {
+  --accent-color: #ff6c00;
+  --primary-text-color: #555555;
+  --secondary-text-color: #303030;
+  --third-text-color: #9da4bd;
+  --primary-font: "Open Sans", sans-serif;
+  --secondaty-font: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-text-color);
+  line-height: 1.36;
+}
+
+ul {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link.current {
+  color: var(--accent-color);
+}
+
+.button {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.top-text {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--secondaty-font);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.67;
+  letter-spacing: 0.05em;
+}
+
+.under-title-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* ------------------HEADER------------------ */
+.nav-item {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.nav-item:focus,
+.nav-item:hover {
+  color: var(--accent-color);
+}
+
+.social-link {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--secondary-text-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: var(--accent-color);
+}
+
+/* ------------HERO--------------- */
+.hero-upper-title {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+  font-family: var(--secondaty-font);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.hero-bottom-text {
+  color: var(--third-text-color);
+}
+
+.about-top-title {
+  color: var(--secondary-text-color);
+}
+
+.about-title {
+  color: var(--secondary-text-color);
+}
+
+.about-bottom-text {
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+.secondary.button {
+  color: var(--secondary-text-color);
+}
+
+/* -----------SERVICES AND PRICES-------------- */
+.sap-upper-text {
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.sap-title {
+  color: #ffffff;
+}
+
+.sap-item > p {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+
+/* ---------------ADVANTAGES--------------- */
+.advantage-number {
+  font-weight: 700;
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--secondary-text-color);
+}
+
+.advantage-text {
+  font-weight: 600;
+  font-size: 11px;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.advantages-upper-text {
+  color: var(--secondary-text-color);
+}
+
+.advantages-title {
+  color: var(--secondary-text-color);
+}
+
+/* -----------------BARBERS------------------ */
+
+.barbers-title {
+  color: var(--secondary-text-color);
+}
+
+.name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.job-title {
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+/* ---------------GALLARY---------------------- */
+.gallary-title {
+  color: var(--secondary-text-color);
+}
+
+/* ---------------BOOKING------------------ */
+.booking-title {
+  color: #ffffff;
+}
+
+/* -------------CONTACTS------------ */
+.contacts-title {
+  color: #ffffff;
+}
+
+.geolocation {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+
+.address-link {
+  font-style: normal;
+  color: var(--third-text-color);
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.contacts-bottom-text {
+  color: #ffffff;
+}
+
+.work-schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+
+/* -----------FOOTER----------- */
+.copy {
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--third-text-color);
+}
