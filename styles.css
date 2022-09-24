@@ -13,8 +13,34 @@ body {
   line-height: 1.36;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1170px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: teal;
+  outline: 2px solid tomato;
+  margin: 0 auto;
 }
 
 .link {
@@ -26,16 +52,23 @@ ul {
 }
 
 .button {
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+
   font-family: var(--primary-font);
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
   color: #ffffff;
+  background-color: transparent;
 }
 
 .top-text {
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
@@ -56,16 +89,49 @@ ul {
 }
 
 /* ------------------HEADER------------------ */
-.nav-item {
+
+.container.sidebar {
+  padding: 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-block;
   color: #ffffff;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
 }
 
-.nav-item:focus,
-.nav-item:hover {
+.nav-link:focus,
+.nav-link:hover {
   color: var(--accent-color);
+}
+
+.nav-list > .nav-item {
+  margin-left: 30px;
+}
+
+.nav-list > .nav-item:first-child {
+  margin-left: 100px;
+}
+
+.tel {
+  margin-left: 254px;
+  align-items: center;
+}
+
+.nav > .primary.button {
+  margin-left: 40px;
 }
 
 .social-link {
@@ -81,6 +147,10 @@ ul {
 }
 
 /* ------------HERO--------------- */
+.hero .container {
+  padding-left: 100px;
+}
+
 .hero-upper-title {
   color: rgba(157, 164, 189, 0.6);
 }
@@ -92,23 +162,56 @@ ul {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .hero-bottom-text {
   color: var(--third-text-color);
 }
 
+/* ----------ABOUT------------- */
+.about .container {
+  display: flex;
+}
+
+.about-photos {
+  margin-right: 30px;
+}
+
+.about-photos .photos-list {
+  display: flex;
+}
+
+.photo-item {
+  margin-right: 30px;
+}
+
+.photo-item:last-child {
+  margin-right: 0;
+}
+
+.about-text {
+  margin-right: 100px;
+}
+
 .about-top-title {
   color: var(--secondary-text-color);
+  margin-bottom: 20px;
 }
 
 .about-title {
   color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.about-text .under-title-text {
+  margin-bottom: 20px;
 }
 
 .about-bottom-text {
   line-height: 1.86;
   letter-spacing: 0.02em;
+  margin-bottom: 20px;
 }
 
 .secondary.button {
@@ -123,6 +226,38 @@ ul {
 
 .sap-title {
   color: #ffffff;
+  margin-bottom: 45px;
+}
+
+.sap-price {
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.sap-list {
+  margin-right: 30px;
+  padding: 30px 21px;
+  width: 570px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.sap-list:last-child {
+  margin-right: 0;
+}
+
+.sap-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sap-item:last-child {
+  margin-bottom: 0;
+}
+
+.sap-container > .button {
+  margin: 0 auto;
+  display: block;
 }
 
 .sap-item > p {
@@ -133,7 +268,33 @@ ul {
 }
 
 /* ---------------ADVANTAGES--------------- */
+.advantages .container {
+  display: flex;
+  justify-content: center;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 130px;
+  margin-left: 100px;
+}
+
+.advantage-item {
+  padding: 20px 24px;
+  width: 170px;
+  height: 130px;
+  text-align: center;
+
+  background-color: #f7f7f7;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
 .advantage-number {
+  display: block;
+  margin-bottom: 6px;
+
   font-weight: 700;
   font-size: 42px;
   text-align: center;
@@ -148,21 +309,36 @@ ul {
   color: var(--secondary-text-color);
 }
 
+.adv-main-text {
+  margin-right: 100px;
+}
+
 .advantages-upper-text {
   color: var(--secondary-text-color);
 }
 
 .advantages-title {
+  margin-bottom: 20px;
   color: var(--secondary-text-color);
 }
 
 /* -----------------BARBERS------------------ */
+.barbers-list {
+  display: flex;
+  justify-content: space-between;
+}
 
 .barbers-title {
+  margin-bottom: 45px;
   color: var(--secondary-text-color);
 }
 
+.barber-photo {
+  margin-bottom: 30px;
+}
+
 .name {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
@@ -172,6 +348,7 @@ ul {
 }
 
 .job-title {
+  margin-bottom: 30px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
@@ -179,7 +356,13 @@ ul {
 
 /* ---------------GALLARY---------------------- */
 .gallary-title {
+  margin-bottom: 45px;
   color: var(--secondary-text-color);
+}
+
+.works-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ---------------BOOKING------------------ */
