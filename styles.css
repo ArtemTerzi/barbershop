@@ -35,12 +35,17 @@ img {
 }
 
 .container {
-  width: 1170px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: teal;
   outline: 2px solid tomato;
   margin: 0 auto;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .link {
@@ -55,6 +60,8 @@ img {
   padding: 12px 20px;
   border: 1px solid var(--accent-color);
   border-radius: 25px;
+  min-width: 160px;
+  height: 40px;
 
   font-family: var(--primary-font);
   font-weight: 600;
@@ -65,6 +72,11 @@ img {
 
   color: #ffffff;
   background-color: transparent;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--accent-color);
 }
 
 .top-text {
@@ -89,7 +101,10 @@ img {
 }
 
 /* ------------------HEADER------------------ */
-
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 .container.sidebar {
   padding: 0;
 }
@@ -99,9 +114,14 @@ img {
   align-items: center;
 }
 
+.site-logo {
+  padding-top: 32px;
+  padding-right: 31px;
+  padding-bottom: 32px;
+}
+
 .nav-list {
   display: flex;
-  align-items: center;
 }
 
 .nav-link {
@@ -148,7 +168,22 @@ img {
 
 /* ------------HERO--------------- */
 .hero .container {
-  padding-left: 100px;
+  display: flex;
+}
+
+.hero-container {
+  display: flex;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.hero-list {
+  width: 100px;
+}
+
+.hero-main-text {
+  background-color: tomato;
+  flex-grow: 1;
 }
 
 .hero-upper-title {
@@ -167,6 +202,7 @@ img {
 
 .hero-bottom-text {
   color: var(--third-text-color);
+  max-width: 360px;
 }
 
 /* ----------ABOUT------------- */
@@ -180,14 +216,7 @@ img {
 
 .about-photos .photos-list {
   display: flex;
-}
-
-.photo-item {
-  margin-right: 30px;
-}
-
-.photo-item:last-child {
-  margin-right: 0;
+  gap: 30px;
 }
 
 .about-text {
@@ -202,6 +231,7 @@ img {
 .about-title {
   color: var(--secondary-text-color);
   margin-bottom: 20px;
+  line-height: 1.17;
 }
 
 .about-text .under-title-text {
@@ -212,6 +242,8 @@ img {
   line-height: 1.86;
   letter-spacing: 0.02em;
   margin-bottom: 20px;
+  font-size: 14px;
+  max-width: 470px;
 }
 
 .secondary.button {
@@ -326,6 +358,11 @@ img {
 .barbers-list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+}
+
+.barber {
+  width: calc((100% - 60px) / 3);
 }
 
 .barbers-title {
@@ -351,11 +388,26 @@ img {
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ff6c00;
+  color: var(--accent-color);
+}
+
+.barber-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-soc-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: var(--accent-color);
 }
 
 /* ---------------GALLARY---------------------- */
-.gallary-title {
+.gallery-title {
   margin-bottom: 45px;
   color: var(--secondary-text-color);
 }
@@ -363,6 +415,10 @@ img {
 .works-list {
   display: flex;
   justify-content: space-between;
+}
+
+.work-item {
+  width: calc((100% - 90px) / 4);
 }
 
 /* ---------------BOOKING------------------ */
@@ -403,6 +459,7 @@ img {
 }
 
 /* -----------FOOTER----------- */
+
 .copy {
   font-weight: 600;
   letter-spacing: 0.2em;
