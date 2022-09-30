@@ -80,10 +80,20 @@ img {
 }
 
 .top-text {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
+  gap: 20px;
+}
+
+.top-text::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .title {
@@ -112,12 +122,6 @@ img {
 .header .container {
   display: flex;
   align-items: center;
-}
-
-.site-logo {
-  padding-top: 32px;
-  padding-right: 31px;
-  padding-bottom: 32px;
 }
 
 .nav-list {
@@ -270,7 +274,14 @@ img {
   margin-right: 30px;
   padding: 30px 21px;
   width: 570px;
+}
+
+.sap-list:nth-child(odd) {
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.sap-list:nth-child(even) {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .sap-list:last-child {
@@ -281,10 +292,23 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  align-items: baseline;
+  gap: 12px;
 }
 
 .sap-item:last-child {
   margin-bottom: 0;
+}
+
+.sap-item > p:nth-child(2n) {
+  order: 1;
+}
+
+.sap-item::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .sap-container > .button {
@@ -319,8 +343,14 @@ img {
   text-align: center;
 
   background-color: #f7f7f7;
+}
+
+.advantage-item:nth-child(odd) {
   margin-right: 30px;
-  margin-bottom: 30px;
+}
+
+.advantage-item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .advantage-number {
@@ -398,12 +428,20 @@ img {
 }
 
 .barbers-soc-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
 
-  background-color: var(--accent-color);
+  background-color: #ffffff;
+  fill: var(--secondary-text-color);
+}
+
+.barbers-soc-link:hover,
+.barbers-soc-link:focus {
+  fill: var(--accent-color);
 }
 
 /* ---------------GALLARY---------------------- */
@@ -421,12 +459,27 @@ img {
   width: calc((100% - 90px) / 4);
 }
 
+/* ----------Booking-contant BOX----------- */
+.booking-contacts-box {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ---------------BOOKING------------------ */
+.booking.section {
+  width: calc(50% - 15px);
+}
+
 .booking-title {
   color: #ffffff;
 }
 
 /* -------------CONTACTS------------ */
+.contacts.section {
+  width: calc(50% - 15px);
+  padding-left: 100px;
+}
+
 .contacts-title {
   color: #ffffff;
 }
