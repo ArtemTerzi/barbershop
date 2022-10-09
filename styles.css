@@ -5,6 +5,7 @@
   --third-text-color: #9da4bd;
   --primary-font: "Open Sans", sans-serif;
   --secondaty-font: "Raleway", sans-serif;
+  --primary-animation-duration: 300ms;
 }
 
 body {
@@ -48,7 +49,6 @@ address {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
   margin: 0 auto;
 }
 
@@ -81,6 +81,8 @@ address {
 
   color: #ffffff;
   background-color: transparent;
+
+  transition: background-color var(--primary-animation-duration) linear;
 }
 
 .button:hover,
@@ -119,8 +121,64 @@ address {
   letter-spacing: 0.02em;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transition: opacity var(--primary-animation-duration) linear,
+    visibility var(--primary-animation-duration) linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 600px;
+  height: 400px;
+
+  background-color: #ffffff;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--primary-animation-duration) linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.button-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+}
+
 /* ------------------HEADER------------------ */
 .header {
+  position: absolute;
+  width: 100%;
+
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -143,6 +201,8 @@ address {
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
+
+  transition: color var(--primary-animation-duration) linear;
 }
 
 .nav-link:focus,
@@ -172,6 +232,8 @@ address {
   font-size: 11px;
   letter-spacing: 0.2em;
   color: var(--secondary-text-color);
+
+  transition: color var(--primary-animation-duration) linear;
 }
 
 .social-link:hover,
@@ -190,12 +252,29 @@ address {
 
 .hero-container {
   display: flex;
+  width: 100px;
+  align-items: flex-end;
   padding: 0;
   background-color: #ffffff;
 }
 
 .hero-list {
-  width: 100px;
+  display: flex;
+
+  padding-left: 27px;
+  padding-top: 40px;
+  gap: 40px;
+  align-items: center;
+
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .hero-main-text {
@@ -471,6 +550,8 @@ address {
 
   background-color: #ffffff;
   fill: var(--secondary-text-color);
+
+  transition: fill var(--primary-animation-duration) linear;
 }
 
 .barbers-soc-link:hover,

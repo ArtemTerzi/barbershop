@@ -31,7 +31,7 @@
         <li class="nav-item"><a href="./index.html" class="nav-link link">Contacts</a></li>
       </ul>
       <a href="tel:+380441111111" class="nav-link link tel">+38 044 111 11 11</a>
-      <button type="button" class="primary button">Online-booking</button>
+      <button type="button" class="primary button" data-modal-open>Online-booking</button>
     </div>
   </header>
   <main>
@@ -85,7 +85,7 @@
             same wave" with clients. Therefore, we are always ready to improve
             everyone who comes to us!
           </p>
-          <button type="button" class="secondary button">Online-booking</button>
+          <button type="button" class="secondary button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </section>
@@ -132,7 +132,7 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="button">Online-booking</button>
+        <button type="button" class="button" data-modal-open>Online-booking</button>
       </div>
     </section>
     <!--OUR ADVANTAGES -->
@@ -334,6 +334,17 @@
       </ul>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="button-close" data-modal-close>
+        <svg width="18px" height="18px" class="icon-close">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
